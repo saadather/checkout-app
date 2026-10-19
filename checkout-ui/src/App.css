@@ -1,0 +1,428 @@
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: #17202b;
+  background: #f6f7f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background: white;
+  border-bottom: 1px solid #e7e9ed;
+}
+
+.brand {
+  font-size: 25px;
+  font-weight: 850;
+  letter-spacing: -1.3px;
+  text-decoration: none;
+  color: #18212c;
+}
+
+.brand span {
+  color: #ef4771;
+}
+
+.secure-label,
+.muted {
+  color: #737d8c;
+  font-size: 14px;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-link {
+  padding: 0;
+  margin: 0;
+}
+
+.auth-card,
+.dashboard {
+  text-align: left;
+}
+
+.auth-card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #e5e8ed;
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: 0 10px 35px #1d29390b;
+}
+
+.sign-in-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.sign-in-form label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sign-in-form input {
+  width: 100%;
+  border: 1px solid #dce1e8;
+  border-radius: 9px;
+  padding: 13px 14px;
+}
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.session-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.session-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  border: 1px solid #e5e8ed;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.session-row .primary-button {
+  width: auto;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.page-content {
+  max-width: 1080px;
+  margin: 42px auto;
+  padding: 0 24px 60px;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  border: 1px solid #e5e8ed;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px #1d29390b;
+}
+
+.event-art {
+  min-height: 370px;
+  padding: 36px;
+  color: white;
+  background: linear-gradient(140deg, #172238, #424e7e 60%, #ef4771);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.event-art > span {
+  align-self: start;
+  padding: 6px 10px;
+  border: 1px solid #ffffff66;
+  border-radius: 5px;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.event-art h2 {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+  margin: 28px 0 12px;
+}
+
+.event-art p {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.event-details,
+.checkout-main,
+.resume-panel {
+  padding: 30px;
+}
+
+.eyebrow {
+  color: #7d8796;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin: 12px 0;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+.event-footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 36px 0 24px;
+}
+
+.event-footer strong {
+  font-size: 25px;
+}
+
+.quantity-control {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.quantity-control select {
+  padding: 9px;
+  border: 1px solid #d9dee6;
+  border-radius: 7px;
+  background: white;
+}
+
+.primary-button,
+.secondary-button {
+  width: 100%;
+  border-radius: 9px;
+  padding: 13px 16px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.primary-button {
+  background: #ef4771;
+  border: 1px solid #ef4771;
+  color: white;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #d93660;
+}
+
+.secondary-button {
+  background: white;
+  color: #263243;
+  border: 1px solid #dce1e8;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.checkout-main,
+.resume-panel {
+  background: white;
+  border: 1px solid #e5e8ed;
+  border-radius: 15px;
+  min-width: 0;
+}
+
+.session-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f7f8fa;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 28px 0;
+}
+
+.session-strip > div {
+  display: grid;
+  gap: 6px;
+}
+
+.session-strip strong {
+  font-size: 14px;
+}
+
+.ticket-summary {
+  border-top: 1px solid #e9ecf1;
+  padding-top: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
+  font-size: 14px;
+}
+
+.total {
+  border-top: 1px solid #e9ecf1;
+  font-weight: 800;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.alert,
+.state-card {
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.alert p {
+  margin: 8px 0;
+}
+
+.error {
+  color: #9f2525;
+  background: #fff0f0;
+  border: 1px solid #ffd5d5;
+}
+
+.success,
+.success-state {
+  color: #17683c;
+  background: #effaf3;
+  border: 1px solid #ccefd9;
+}
+
+.warning {
+  background: #fff8e8;
+  border: 1px solid #f1dca8;
+  color: #73551b;
+}
+
+.state-card {
+  background: #f7f8fa;
+  border: 1px solid #e5e8ed;
+}
+
+.share-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sim-links {
+  display: grid;
+  margin-top: 22px;
+  padding-top: 8px;
+  border-top: 1px solid #e8ebf0;
+}
+
+.resume-panel input {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid #dce1e8;
+  border-radius: 7px;
+  padding: 11px;
+  font-size: 12px;
+  color: #596475;
+}
+
+.dev-tools {
+  border-top: 1px solid #e8ebf0;
+  margin-top: 28px;
+  padding-top: 14px;
+}
+
+.text-button {
+  display: block;
+  border: none;
+  background: none;
+  color: #b42d52;
+  padding: 9px 0;
+  text-align: left;
+  font-size: 13px;
+}
+
+.loading {
+  color: #596475;
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .page-content {
+    margin-top: 20px;
+    padding: 0 14px 35px;
+  }
+
+  .event-card,
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .event-art {
+    min-height: 240px;
+  }
+
+  .event-details,
+  .checkout-main,
+  .resume-panel {
+    padding: 22px;
+  }
+
+  .topbar {
+    padding: 16px 20px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .session-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .session-row .primary-button {
+    width: 100%;
+  }
+}
